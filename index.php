@@ -2,10 +2,16 @@
 <html>
 <head>
   <title>Login</title>
+  <meta charset="utf-8">
 </head>
 <body>
   <h1>Login</h1>
   <div class="form-container">
+
+    <? if(isset($_GET['error'])) : ?>
+      <div class="error">Invalid username or password</div>
+    <? endif; ?>
+
     <form action="login.php" method="post" name="loginForm">
       <div class="input-group">
         <label> Username </label>
@@ -28,6 +34,5 @@
       </div>
     </form>
   </div>
-
 </body>
 </html>
